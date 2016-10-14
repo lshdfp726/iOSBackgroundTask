@@ -17,7 +17,7 @@
                BlueprintIdentifier = "324E3F9F1DAE34DF00172D6C"
                BuildableName = "BackGroundTask.app"
                BlueprintName = "BackGroundTask"
-               ReferencedContainer = "container:BackGroundTask.xcodeproj">
+               ReferencedContainer = "container:BackgroundTask.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "324E3FB81DAE34DF00172D6C"
                BuildableName = "BackGroundTaskTests.xctest"
                BlueprintName = "BackGroundTaskTests"
-               ReferencedContainer = "container:BackGroundTask.xcodeproj">
+               ReferencedContainer = "container:BackgroundTask.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -45,7 +45,7 @@
                BlueprintIdentifier = "324E3FC31DAE34DF00172D6C"
                BuildableName = "BackGroundTaskUITests.xctest"
                BlueprintName = "BackGroundTaskUITests"
-               ReferencedContainer = "container:BackGroundTask.xcodeproj">
+               ReferencedContainer = "container:BackgroundTask.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,7 +55,7 @@
             BlueprintIdentifier = "324E3F9F1DAE34DF00172D6C"
             BuildableName = "BackGroundTask.app"
             BlueprintName = "BackGroundTask"
-            ReferencedContainer = "container:BackGroundTask.xcodeproj">
+            ReferencedContainer = "container:BackgroundTask.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -78,7 +78,7 @@
             BlueprintIdentifier = "324E3F9F1DAE34DF00172D6C"
             BuildableName = "BackGroundTask.app"
             BlueprintName = "BackGroundTask"
-            ReferencedContainer = "container:BackGroundTask.xcodeproj">
+            ReferencedContainer = "container:BackgroundTask.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -97,7 +97,7 @@
             BlueprintIdentifier = "324E3F9F1DAE34DF00172D6C"
             BuildableName = "BackGroundTask.app"
             BlueprintName = "BackGroundTask"
-            ReferencedContainer = "container:BackGroundTask.xcodeproj">
+            ReferencedContainer = "container:BackgroundTask.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

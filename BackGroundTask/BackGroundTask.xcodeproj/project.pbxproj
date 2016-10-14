@@ -13,8 +13,9 @@
 		324E3FAE1DAE34DF00172D6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 324E3FAC1DAE34DF00172D6C /* Main.storyboard */; };
 		324E3FB01DAE34DF00172D6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 324E3FAF1DAE34DF00172D6C /* Assets.xcassets */; };
 		324E3FB31DAE34DF00172D6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 324E3FB11DAE34DF00172D6C /* LaunchScreen.storyboard */; };
-		324E3FBE1DAE34DF00172D6C /* BackGroundTaskTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 324E3FBD1DAE34DF00172D6C /* BackGroundTaskTests.m */; };
-		324E3FC91DAE34DF00172D6C /* BackGroundTaskUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 324E3FC81DAE34DF00172D6C /* BackGroundTaskUITests.m */; };
+		324E3FBE1DAE34DF00172D6C /* BackgroundTaskTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 324E3FBD1DAE34DF00172D6C /* BackgroundTaskTests.m */; };
+		324E3FC91DAE34DF00172D6C /* BackgroundTaskUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 324E3FC81DAE34DF00172D6C /* BackgroundTaskUITests.m */; };
+		32C0B4EC1DB08FE100CC7CBE /* READ.md in Resources */ = {isa = PBXBuildFile; fileRef = 32C0B4EB1DB08FE100CC7CBE /* READ.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,11 +47,12 @@
 		324E3FB21DAE34DF00172D6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		324E3FB41DAE34DF00172D6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		324E3FB91DAE34DF00172D6C /* BackGroundTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackGroundTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		324E3FBD1DAE34DF00172D6C /* BackGroundTaskTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackGroundTaskTests.m; sourceTree = "<group>"; };
+		324E3FBD1DAE34DF00172D6C /* BackgroundTaskTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackgroundTaskTests.m; sourceTree = "<group>"; };
 		324E3FBF1DAE34DF00172D6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		324E3FC41DAE34DF00172D6C /* BackGroundTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackGroundTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		324E3FC81DAE34DF00172D6C /* BackGroundTaskUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackGroundTaskUITests.m; sourceTree = "<group>"; };
+		324E3FC81DAE34DF00172D6C /* BackgroundTaskUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackgroundTaskUITests.m; sourceTree = "<group>"; };
 		324E3FCA1DAE34DF00172D6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32C0B4EB1DB08FE100CC7CBE /* READ.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = READ.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +83,9 @@
 		324E3F971DAE34DF00172D6C = {
 			isa = PBXGroup;
 			children = (
-				324E3FA21DAE34DF00172D6C /* BackGroundTask */,
-				324E3FBC1DAE34DF00172D6C /* BackGroundTaskTests */,
-				324E3FC71DAE34DF00172D6C /* BackGroundTaskUITests */,
+				324E3FA21DAE34DF00172D6C /* BackgroundTask */,
+				324E3FBC1DAE34DF00172D6C /* BackgroundTaskTests */,
+				324E3FC71DAE34DF00172D6C /* BackgroundTaskUITests */,
 				324E3FA11DAE34DF00172D6C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,7 +100,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		324E3FA21DAE34DF00172D6C /* BackGroundTask */ = {
+		324E3FA21DAE34DF00172D6C /* BackgroundTask */ = {
 			isa = PBXGroup;
 			children = (
 				324E3FA61DAE34DF00172D6C /* AppDelegate.h */,
@@ -110,7 +112,9 @@
 				324E3FB11DAE34DF00172D6C /* LaunchScreen.storyboard */,
 				324E3FB41DAE34DF00172D6C /* Info.plist */,
 				324E3FA31DAE34DF00172D6C /* Supporting Files */,
+				32C0B4EB1DB08FE100CC7CBE /* READ.md */,
 			);
+			name = BackgroundTask;
 			path = BackGroundTask;
 			sourceTree = "<group>";
 		};
@@ -122,21 +126,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		324E3FBC1DAE34DF00172D6C /* BackGroundTaskTests */ = {
+		324E3FBC1DAE34DF00172D6C /* BackgroundTaskTests */ = {
 			isa = PBXGroup;
 			children = (
-				324E3FBD1DAE34DF00172D6C /* BackGroundTaskTests.m */,
+				324E3FBD1DAE34DF00172D6C /* BackgroundTaskTests.m */,
 				324E3FBF1DAE34DF00172D6C /* Info.plist */,
 			);
+			name = BackgroundTaskTests;
 			path = BackGroundTaskTests;
 			sourceTree = "<group>";
 		};
-		324E3FC71DAE34DF00172D6C /* BackGroundTaskUITests */ = {
+		324E3FC71DAE34DF00172D6C /* BackgroundTaskUITests */ = {
 			isa = PBXGroup;
 			children = (
-				324E3FC81DAE34DF00172D6C /* BackGroundTaskUITests.m */,
+				324E3FC81DAE34DF00172D6C /* BackgroundTaskUITests.m */,
 				324E3FCA1DAE34DF00172D6C /* Info.plist */,
 			);
+			name = BackgroundTaskUITests;
 			path = BackGroundTaskUITests;
 			sourceTree = "<group>";
 		};
@@ -224,7 +230,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 324E3F9B1DAE34DF00172D6C /* Build configuration list for PBXProject "BackGroundTask" */;
+			buildConfigurationList = 324E3F9B1DAE34DF00172D6C /* Build configuration list for PBXProject "BackgroundTask" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -249,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32C0B4EC1DB08FE100CC7CBE /* READ.md in Resources */,
 				324E3FB31DAE34DF00172D6C /* LaunchScreen.storyboard in Resources */,
 				324E3FB01DAE34DF00172D6C /* Assets.xcassets in Resources */,
 				324E3FAE1DAE34DF00172D6C /* Main.storyboard in Resources */,
@@ -286,7 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				324E3FBE1DAE34DF00172D6C /* BackGroundTaskTests.m in Sources */,
+				324E3FBE1DAE34DF00172D6C /* BackgroundTaskTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				324E3FC91DAE34DF00172D6C /* BackGroundTaskUITests.m in Sources */,
+				324E3FC91DAE34DF00172D6C /* BackgroundTaskUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,7 +507,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		324E3F9B1DAE34DF00172D6C /* Build configuration list for PBXProject "BackGroundTask" */ = {
+		324E3F9B1DAE34DF00172D6C /* Build configuration list for PBXProject "BackgroundTask" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				324E3FCB1DAE34DF00172D6C /* Debug */,
@@ -516,6 +523,7 @@
 				324E3FCF1DAE34DF00172D6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		324E3FD01DAE34DF00172D6C /* Build configuration list for PBXNativeTarget "BackGroundTaskTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +532,7 @@
 				324E3FD21DAE34DF00172D6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		324E3FD31DAE34DF00172D6C /* Build configuration list for PBXNativeTarget "BackGroundTaskUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +541,7 @@
 				324E3FD51DAE34DF00172D6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

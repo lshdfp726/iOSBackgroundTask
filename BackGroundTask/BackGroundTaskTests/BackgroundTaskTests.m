@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface BackGroundTaskTests : XCTestCase
+@interface BackgroundTaskTests : XCTestCase
 
 @end
 
-@implementation BackGroundTaskTests
+@implementation BackgroundTaskTests
 
 - (void)setUp {
     [super setUp];

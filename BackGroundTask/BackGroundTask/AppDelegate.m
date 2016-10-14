@@ -7,17 +7,61 @@
 //
 
 #import "AppDelegate.h"
+#define ImageUrl @"http://img05.tooopen.com/images/20141208/sy_76623349543.jpg"
 
 @interface AppDelegate ()
-
+@property (strong, nonatomic) NSString *filePath;//文件存储路径
 @end
 
 @implementation AppDelegate
 
+- (NSString *)filePath {
+    if (!_filePath) {
+        NSArray *fileArray =  NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *path     = [fileArray firstObject];
+        _filePath          = [path stringByAppendingString:@"/Image"];
+    }
+    return _filePath;
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [application setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum];
     return YES;
+}
+
+- (void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult result))completionHandler {
+   NSFileManager *manager = [NSFileManager defaultManager];
+    if (![manager contentsAtPath:self.filePath]) {
+        NSURL *url = [NSURL URLWithString:ImageUrl];
+        NSURLRequest *request = [[NSURLRequest alloc]initWithURL:url];
+        NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+        NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
+        NSURLSessionDownloadTask *dataTask = [session downloadTaskWithRequest:request completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+            if (error) {
+                completionHandler(UIBackgroundFetchResultFailed);//告诉系统别杀掉进程（可看api文档）
+                return ;
+            }
+            if (location){
+                completionHandler(UIBackgroundFetchResultNewData);
+            }else {
+                completionHandler(UIBackgroundFetchResultNoData);
+            }
+            NSError *saveError = nil;
+            [manager moveItemAtPath:location.relativePath toPath:self.filePath error:&saveError];
+            if (saveError) {
+                NSLog(@"%@",saveError);
+            }
+            //通知UI更新界面
+             [[NSNotificationCenter defaultCenter] postNotificationName:@"updataImage" object:self.filePath];
+        }];
+        [dataTask resume];
+    }else {
+     [[NSNotificationCenter defaultCenter] postNotificationName:@"updataImage" object:self.filePath];
+    }
+    
+    
 }
 
 
